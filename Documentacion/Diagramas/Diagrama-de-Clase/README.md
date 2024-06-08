@@ -6,9 +6,9 @@
 | - nombre: string             |
 | - precio: float              |
 | - cantidad: int              |
-| + crearProducto(): void     |
-| + leerProductos(): void     |
-| + actualizarProducto(): void|
+| + crearProducto(): Producto     |
+| + leerProductos(): List<Producto>     |
+| + actualizarProducto(): Producto|
 | + eliminarProducto(): void  |
 
 |           Usuario            |
@@ -16,9 +16,9 @@
 | - id: int                    |
 | - nombreUsuario: string      |
 | - contraseña: string         |
-| + crearUsuario(): void       |
-| + leerUsuarios(): void       |
-| + actualizarUsuario(): void |
+| + crearUsuario(): Usuario       |
+| + leerUsuarios(): List<Usuario>       |
+| + actualizarUsuario(): Usuario |
 | + eliminarUsuario(): void    |
 
 |            Pedido            |
@@ -26,9 +26,9 @@
 | - id: int                    |
 | - fecha: Date                |
 | - estado: string             |
-| + crearPedido(): void        |
-| + leerPedidos(): void        |
-| + actualizarEstado(): void  |
+| + crearPedido(): Pedido        |
+| + leerPedidos(): List<Pedido>        |
+| + actualizarEstado(): Pedido  |
 | + eliminarPedido(): void    |
 
 |          Categoría           |
@@ -36,9 +36,9 @@
 | - id: int                    |
 | - nombre: string             |
 | - descripción: string        |
-| + crearCategoría(): void    |
-| + leerCategorías(): void     |
-| + actualizarCategoría(): void|
+| + crearCategoría(): Categoría    |
+| + leerCategorías(): List<Categoría>     |
+| + actualizarCategoría(): Categoría|
 | + eliminarCategoría(): void |
 
 |         Inventario           |
@@ -46,6 +46,6 @@
 | - id: int                    |
 | - productoId: int            |
 | - cantidadDisponible: int    |
-| + leerInventario(): void     |
-| + actualizarInventario(): void|
+| + leerInventario(): List<Inventario>     |
+| + actualizarInventario(): Inventario|
 
