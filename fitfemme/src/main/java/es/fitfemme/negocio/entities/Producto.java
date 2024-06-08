@@ -10,10 +10,14 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_producto;
+
     private String nombre;
     private String descripcion;
     private float precio;
-    private int id_categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria")
+    private Categoria id_categoria;
 
 
     public Producto() {
@@ -28,7 +32,7 @@ public class Producto {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
-        this.id_categoria = id_categoria;
+        this.id_producto = id_categoria;
     }
 
     public int getId_producto() {
@@ -64,11 +68,11 @@ public class Producto {
     }
 
     public int getId_categoria() {
-        return id_categoria;
+        return id_producto;
     }
 
     public void setId_categoria(int id_categoria) {
-        this.id_categoria = id_categoria;
+        this.id_producto = id_categoria;
     }
 
     @Override
@@ -91,7 +95,7 @@ public class Producto {
                 ", nombre='" + nombre + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", precio=" + precio +
-                ", id_categoria=" + id_categoria +
+                ", id_categoria=" + id_producto +
                 '}';
     }
 }

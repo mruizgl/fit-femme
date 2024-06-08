@@ -91,20 +91,5 @@ public class UsuarioServiceTest {
         });
     }
 
-    @Test
-    public void getObjectByIdTest() {
-        // Arrange
-        int id = 2;
-        Usuario usuario = new Usuario();
-        usuario.setId_usuario(id);
-
-        when(usuarioRepository.findById(id)).thenReturn(usuario);
-
-        // Act
-        Usuario foundUsuario = usuarioService.getObjectById(id);
-
-        // Assert
-        Assertions.assertEquals(usuario, foundUsuario);
-    }
 
 }

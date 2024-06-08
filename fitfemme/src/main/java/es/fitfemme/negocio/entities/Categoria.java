@@ -6,12 +6,14 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name= "Categorias")
+@Table(name = "Categorias")
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_categoria;
+
     private String nombre;
+
     @OneToMany(mappedBy = "id_categoria")
     private Set<Producto> productos;
 

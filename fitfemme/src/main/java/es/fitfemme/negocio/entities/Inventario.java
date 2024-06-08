@@ -7,25 +7,29 @@ import java.util.Objects;
 @Entity
 @Table(name = "Inventario")
 public class Inventario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_producto;
+    @Column(name = "id_producto")
+    private int idProducto;
+
+    @Column(name = "cantidad", nullable = false)
     private int cantidad;
 
     public Inventario() {
     }
 
     public Inventario(int id_producto, int cantidad) {
-        this.id_producto = id_producto;
+        this.idProducto = id_producto;
         this.cantidad = cantidad;
     }
 
     public int getId_producto() {
-        return id_producto;
+        return idProducto;
     }
 
     public void setId_producto(int id_producto) {
-        this.id_producto = id_producto;
+        this.idProducto = id_producto;
     }
 
     public int getCantidad() {
@@ -41,18 +45,18 @@ public class Inventario {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Inventario that = (Inventario) o;
-        return id_producto == that.id_producto;
+        return idProducto == that.idProducto;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id_producto);
+        return Objects.hashCode(idProducto);
     }
 
     @Override
     public String toString() {
         return "Inventario{" +
-                "id_producto=" + id_producto +
+                "id_producto=" + idProducto +
                 ", cantidad=" + cantidad +
                 '}';
     }

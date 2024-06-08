@@ -49,9 +49,5 @@ public class UsuarioService implements ICrudServiceJpa<Usuario> {
 
     }
 
-    @Override
-    public Usuario getObjectById(int id) {
-        return usuarioRepository.findById(id);
-    }
 
 }
