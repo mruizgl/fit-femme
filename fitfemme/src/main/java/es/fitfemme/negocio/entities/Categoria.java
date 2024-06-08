@@ -12,7 +12,7 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_categoria;
     private String nombre;
-    @OneToMany(mappedBy = "categoria")
+    @OneToMany(mappedBy = "id_categoria")
     private Set<Producto> productos;
 
     public Categoria() {
