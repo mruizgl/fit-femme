@@ -3,34 +3,31 @@
 # Pre-Project <a name="pre-project"></a>
 
 <div align="center">
-<img src="img/logo.png" />
+<img src="../../img/logo.png" />
 </div>
 
-## Index
+## Indice
 
-- [Description of the problem](#problem)
-- [Goal](#goal)
-- [Architecture and Technology](#tech)
-- [Sketch](#sketch)
+- [Descripción del proyecto](#problem)
+- [Objetivo](#goal)
+- [Tecnologías utilizadas](#tech)
+- [Preview del proyecto](#sketch)
 
-### Description of the problem <a name="problem"></a>
+### Descripción del proyecto <a name="problem"></a>
 
-- We want that all people have a site to search information 
-  about Star Wars World. 
+Gestión de una tienda de suplementación deportiva especializada en mujeres.
 
-### Goal <a name="goal"></a>
+### Objetivo <a name="goal"></a>
 
-- Our goal is create an app to ask about Star Wars World, 
-  so that anyone can find information about characters, naves, 
-  movies, series, etc. 
+Crear, actualizar, borrar y obtener productos de una base de datos, donde el usuario puede interactuar con el CRUD mediante una interfaz gráfica y puede logarse de forma segura ya que está securizado.
 
-### Architecture and Technology <a name="tech"></a>
+### Tecnologías utilizadas <a name="tech"></a>
 
-- We use the following architecture and technology:
+- Tecnologías del proyecto:
 
-<img src="img/github-logo.png" height="50" /> 
-<img src="img/redbooth-logo.png" height="50"/> 
-<img src="img/java-logo.png" height="50" />
+<img src="../../img/github-logo.png" height="50" /> 
+<img src="../../img/sqlite.png" height="50"/> 
+<img src="../../img/springdatajpa.png" height="50" />
 
 ### Sketch <a name="sketch"></a>
 
