@@ -1,30 +1,24 @@
-package es.fitfemme.negocio.entities;
-
-import jakarta.persistence.*;
+package es.fitfemme.negocio.dto;
 
 import java.util.Objects;
-import java.util.Set;
 
-@Entity
-@Table(name= "Categorias")
-public class Categoria {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CategoriaDTO {
     private int id_categoria;
     private String nombre;
-    @OneToMany(mappedBy = "categoria")
-    private Set<Producto> productos;
+    private int total_productos_categoria;
 
-    public Categoria() {
+
+    public CategoriaDTO() {
     }
-
-    public Categoria(int id_categoria) {
+    public CategoriaDTO(int id_categoria) {
         this.id_categoria = id_categoria;
     }
 
-    public Categoria(int id_categoria, String nombre) {
+
+    public CategoriaDTO(int id_categoria, String nombre, int total_productos_categoria) {
         this.id_categoria = id_categoria;
         this.nombre = nombre;
+        this.total_productos_categoria = total_productos_categoria;
     }
 
     public int getId_categoria() {
@@ -42,20 +36,21 @@ public class Categoria {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public Set<Producto> getProductos() {
-        return productos;
+
+    public int getTotal_productos_categoria() {
+        return total_productos_categoria;
     }
 
-    public void setProductos(Set<Producto> productos) {
-        this.productos = productos;
+    public void setTotal_productos_categoria(int total_productos_categoria) {
+        this.total_productos_categoria = total_productos_categoria;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Categoria categoria = (Categoria) o;
-        return id_categoria == categoria.id_categoria;
+        CategoriaDTO that = (CategoriaDTO) o;
+        return id_categoria == that.id_categoria;
     }
 
     @Override
@@ -65,9 +60,10 @@ public class Categoria {
 
     @Override
     public String toString() {
-        return "Categoria{" +
+        return "CategoriaDTO{" +
                 "id_categoria=" + id_categoria +
                 ", nombre='" + nombre + '\'' +
+                ", total_productos_categoria=" + total_productos_categoria +
                 '}';
     }
 }
