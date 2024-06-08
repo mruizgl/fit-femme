@@ -1,6 +1,5 @@
 package es.fitfemme.negocio.mapper;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import es.fitfemme.negocio.dto.CategoriaDTO;
 import es.fitfemme.negocio.entities.Categoria;
 import es.fitfemme.negocio.entities.Producto;
@@ -13,7 +12,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class CategoriaMapperStructTest {
+public class CategoriaMapperTest {
     private int id_categoria = 1;
     private String nombre = "nombreTest";
     private int total_productos_categoria = 10;
