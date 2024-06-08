@@ -17,7 +17,7 @@ public class CategoriaMapperStructTest {
     private int id_categoria = 1;
     private String nombre = "nombreTest";
     private int total_productos_categoria = 10;
-    private String MESSAGE_ERROR = "No se obtuvo el resultado esperad";
+    private String MESSAGE_ERROR = "No se obtuvo el resultado esperado";
 
     @Test
     public void toDTOTest() {
