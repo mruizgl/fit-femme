@@ -30,10 +30,10 @@ public class CategoriaMapperStructTest {
 
         CategoriaDTO categoriaDTO = CategoriaMapper.toDTO(categoria);
 
-        assertNotNull(categoriaDTO, MESSAGE_ERROR);
-        assertEquals(id_categoria, categoriaDTO.getId_categoria(), MESSAGE_ERROR);
-        assertEquals(nombre, categoriaDTO.getNombre(), MESSAGE_ERROR);
-        assertEquals(productos.size(), categoriaDTO.getTotal_productos_categoria(), MESSAGE_ERROR);
+        Assertions.assertNotNull(categoriaDTO, MESSAGE_ERROR);
+        Assertions.assertEquals(id_categoria, categoriaDTO.getId_categoria(), MESSAGE_ERROR);
+        Assertions.assertEquals(nombre, categoriaDTO.getNombre(), MESSAGE_ERROR);
+        Assertions.assertEquals(productos.size(), categoriaDTO.getTotal_productos_categoria(), MESSAGE_ERROR);
     }
 
     @Test
