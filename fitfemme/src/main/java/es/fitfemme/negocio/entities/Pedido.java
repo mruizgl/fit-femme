@@ -1,9 +1,14 @@
 package es.fitfemme.negocio.entities;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
 import java.util.Objects;
-
+@Entity
+@Table(name = "Pedidos")
 public class Pedido {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_pedido;
     private int id_usuario;
     private Date fecha_pedido;

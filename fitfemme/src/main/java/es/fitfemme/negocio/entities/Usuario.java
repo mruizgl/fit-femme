@@ -1,8 +1,14 @@
 package es.fitfemme.negocio.entities;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
+@Table(name = "Usuarios")
 public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_usuario;
     private String nombre;
     private String email;

@@ -1,8 +1,14 @@
 package es.fitfemme.negocio.entities;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
+@Table(name= "Categorias")
 public class Categoria {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_categoria;
     private String nombre;
 
