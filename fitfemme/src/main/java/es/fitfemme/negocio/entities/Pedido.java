@@ -28,6 +28,38 @@ public class Pedido {
         this.total = total;
     }
 
+    public int getId_pedido() {
+        return id_pedido;
+    }
+
+    public void setId_pedido(int id_pedido) {
+        this.id_pedido = id_pedido;
+    }
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
+    public Date getFecha_pedido() {
+        return fecha_pedido;
+    }
+
+    public void setFecha_pedido(Date fecha_pedido) {
+        this.fecha_pedido = fecha_pedido;
+    }
+
+    public float getTotal() {
+        return total;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
