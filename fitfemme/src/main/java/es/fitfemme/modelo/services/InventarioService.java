@@ -5,9 +5,10 @@ import es.fitfemme.negocio.entities.Categoria;
 import es.fitfemme.negocio.entities.Inventario;
 import es.fitfemme.vista.repository.IInventarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class InventarioService implements ICrudServiceJpa<Inventario> {
     private IInventarioRepository inventarioRepository;
 

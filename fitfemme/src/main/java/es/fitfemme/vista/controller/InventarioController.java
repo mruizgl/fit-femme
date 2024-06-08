@@ -28,7 +28,7 @@ public class InventarioController implements ICrudControllerJpa<Inventario> {
         return inventarioService.getAllObjects();
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("/")
     @Override
     public ResponseEntity<Inventario> saveObject(Inventario inventario) {
         Inventario savedInventario = inventarioService.updateObject(inventario);

@@ -24,7 +24,7 @@ public class CategoriaController implements ICrudControllerJpa<Categoria>{
         return categoriaService.getAllObjects();
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("/")
     @Override
     public ResponseEntity<Categoria> saveObject(@RequestBody Categoria categoria) {
         Categoria savedCategoria = categoriaService.updateObject(categoria);

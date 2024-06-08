@@ -27,7 +27,7 @@ public class UsuarioController implements ICrudControllerJpa<Usuario>{
     @PostMapping("/")
     @Override
     public ResponseEntity<Usuario> saveObject(@RequestBody Usuario usuario) {
-        Usuario savedUsuario = usuarioService.updateObject(usuario);
+        Usuario savedUsuario = usuarioService.saveObject(usuario);
         return new ResponseEntity<>(savedUsuario, HttpStatus.CREATED);
     }
 
