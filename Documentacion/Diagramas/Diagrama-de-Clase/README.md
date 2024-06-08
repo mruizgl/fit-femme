@@ -1,6 +1,5 @@
 ## Diagrama de Clases
 
---------------------------------
 |           Producto           |
 --------------------------------
 | - id: int                    |
@@ -11,9 +10,9 @@
 | + leerProductos(): void     |
 | + actualizarProducto(): void|
 | + eliminarProducto(): void  |
---------------------------------
 
---------------------------------
+
+
 |           Usuario            |
 --------------------------------
 | - id: int                    |
@@ -23,9 +22,9 @@
 | + leerUsuarios(): void       |
 | + actualizarUsuario(): void |
 | + eliminarUsuario(): void    |
---------------------------------
 
---------------------------------
+
+
 |            Pedido            |
 --------------------------------
 | - id: int                    |
@@ -35,9 +34,9 @@
 | + leerPedidos(): void        |
 | + actualizarEstado(): void  |
 | + eliminarPedido(): void    |
---------------------------------
 
---------------------------------
+
+
 |          Categoría           |
 --------------------------------
 | - id: int                    |
@@ -47,9 +46,9 @@
 | + leerCategorías(): void     |
 | + actualizarCategoría(): void|
 | + eliminarCategoría(): void |
---------------------------------
 
---------------------------------
+
+
 |         Inventario           |
 --------------------------------
 | - id: int                    |
