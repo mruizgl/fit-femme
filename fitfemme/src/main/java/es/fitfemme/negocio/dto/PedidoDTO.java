@@ -6,8 +6,6 @@ import java.util.Objects;
 public class PedidoDTO {
     private int id_pedido;
     private int id_usuario;
-    private String nombre_cliente;
-    private String direccion_cliente;
     private Date fecha_pedido;
     private float total;
 
@@ -18,11 +16,9 @@ public class PedidoDTO {
         this.id_pedido = id_pedido;
     }
 
-    public PedidoDTO(int id_pedido, int id_usuario, String nombre_cliente, String direccion_cliente, Date fecha_pedido, float total) {
+    public PedidoDTO(int id_pedido, int id_usuario, Date fecha_pedido, float total) {
         this.id_pedido = id_pedido;
         this.id_usuario = id_usuario;
-        this.nombre_cliente = nombre_cliente;
-        this.direccion_cliente = direccion_cliente;
         this.fecha_pedido = fecha_pedido;
         this.total = total;
     }
@@ -43,21 +39,6 @@ public class PedidoDTO {
         this.id_usuario = id_usuario;
     }
 
-    public String getDireccion_cliente() {
-        return direccion_cliente;
-    }
-
-    public void setDireccion_cliente(String direccion_cliente) {
-        this.direccion_cliente = direccion_cliente;
-    }
-
-    public String getNombre_cliente() {
-        return nombre_cliente;
-    }
-
-    public void setNombre_cliente(String nombre_cliente) {
-        this.nombre_cliente = nombre_cliente;
-    }
 
     public Date getFecha_pedido() {
         return fecha_pedido;
@@ -93,8 +74,6 @@ public class PedidoDTO {
         return "PedidoDTO{" +
                 "id_pedido=" + id_pedido +
                 ", id_usuario=" + id_usuario +
-                ", nombre_cliente='" + nombre_cliente + '\'' +
-                ", direccion_cliente='" + direccion_cliente + '\'' +
                 ", fecha_pedido=" + fecha_pedido +
                 ", total=" + total +
                 '}';
