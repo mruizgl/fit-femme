@@ -1,7 +1,7 @@
 ## Diagrama de Clases
 
 |           Producto           |
---------------------------------
+|------------------------------|
 | - id: int                    |
 | - nombre: string             |
 | - precio: float              |
@@ -11,10 +11,8 @@
 | + actualizarProducto(): void|
 | + eliminarProducto(): void  |
 
-
-
 |           Usuario            |
---------------------------------
+|------------------------------|
 | - id: int                    |
 | - nombreUsuario: string      |
 | - contraseña: string         |
@@ -23,10 +21,8 @@
 | + actualizarUsuario(): void |
 | + eliminarUsuario(): void    |
 
-
-
 |            Pedido            |
---------------------------------
+|------------------------------|
 | - id: int                    |
 | - fecha: Date                |
 | - estado: string             |
@@ -35,10 +31,8 @@
 | + actualizarEstado(): void  |
 | + eliminarPedido(): void    |
 
-
-
 |          Categoría           |
---------------------------------
+|------------------------------|
 | - id: int                    |
 | - nombre: string             |
 | - descripción: string        |
@@ -47,13 +41,11 @@
 | + actualizarCategoría(): void|
 | + eliminarCategoría(): void |
 
-
-
 |         Inventario           |
---------------------------------
+|------------------------------|
 | - id: int                    |
 | - productoId: int            |
 | - cantidadDisponible: int    |
 | + leerInventario(): void     |
 | + actualizarInventario(): void|
---------------------------------
+
