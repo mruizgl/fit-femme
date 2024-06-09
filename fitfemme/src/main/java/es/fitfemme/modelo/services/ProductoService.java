@@ -44,7 +44,10 @@ public class ProductoService implements ICrudServiceJpa<Producto> {
 
     @Override
     public Producto updateObject(Producto producto) {
-        return updateObject(producto);
+        if (!productoRepository.existsById(producto.getId_producto())) {
+            throw new RuntimeException("Producto no encontrado por el id  " + producto.getId_producto());
+        }
+        return productoRepository.save(producto);
     }
 
     @Override
