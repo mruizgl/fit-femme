@@ -11,7 +11,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        
+
         return http
                 .csrf(csrf ->
                         csrf.disable())

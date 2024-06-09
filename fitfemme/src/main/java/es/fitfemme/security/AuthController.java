@@ -1,4 +1,4 @@
-package es.fitfemme.vista.controller;
+package es.fitfemme.security;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
