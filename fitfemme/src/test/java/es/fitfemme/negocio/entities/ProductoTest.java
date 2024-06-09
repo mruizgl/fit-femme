@@ -47,6 +47,54 @@ public class ProductoTest {
         assertFalse(producto.equals(new Object()));
     }
 
+    @Test
+    public void constructorTest() {
+        // Arrange
+        int id_producto = 1;
+        String nombre = "Producto Test";
+        String descripcion = "Descripción del producto";
+        float precio = 10.5f;
+        Categoria categoria = new Categoria(1, "Categoria Test");
+
+        // Act
+        Producto producto = new Producto(id_producto, nombre, descripcion, precio, categoria);
+
+        // Assert
+        assertNotNull(producto);
+        assertEquals(id_producto, producto.getId_producto());
+        assertEquals(nombre, producto.getNombre());
+        assertEquals(descripcion, producto.getDescripcion());
+        assertEquals(precio, producto.getPrecio());
+        assertEquals(categoria, producto.getCategoria());
+    }
+
+    @Test
+    public void hashCodeTest() {
+        // Arrange
+        int id_producto = 1;
+        Producto producto1 = new Producto(id_producto, "Producto1", "Descripción1", 10.5f, new Categoria(1, "Categoria1"));
+        Producto producto2 = new Producto(id_producto, "Producto2", "Descripción2", 20.5f, new Categoria(2, "Categoria2"));
+
+        // Act
+        int hashCode1 = producto1.hashCode();
+        int hashCode2 = producto2.hashCode();
+
+        // Assert
+        assertEquals(hashCode1, hashCode2);
+    }
+
+    @Test
+    public void toStringTest() {
+        // Arrange
+        Producto producto = new Producto(1, "Producto Test", "Descripción del producto", 10.5f, new Categoria(1, "Categoria Test"));
+
+        // Act
+        String result = producto.toString();
+
+        // Assert
+        assertNotNull(result);
+        assertEquals("Producto{id_producto=1, nombre='Producto Test', descripcion='Descripción del producto', precio=10.5, id_categoria=1}", result);
+    }
 
 
 
