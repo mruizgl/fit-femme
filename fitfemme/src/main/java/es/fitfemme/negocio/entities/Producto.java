@@ -88,7 +88,10 @@ public class Producto {
     }
 
     public void setId_categoria(int id_categoria) {
-        this.id_producto = id_categoria;
+        if (this.categoria == null) {
+            this.categoria = new Categoria();
+        }
+        this.categoria.setId_categoria(id_categoria);
     }
 
     @Override

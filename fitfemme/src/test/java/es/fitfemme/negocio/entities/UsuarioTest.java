@@ -57,6 +57,7 @@ public class UsuarioTest {
     @Test
     public void testGettersAndSetters() {
         Usuario usuario = new Usuario();
+        Usuario usuario1 = new Usuario(1234);
         usuario.setId_usuario(1);
         usuario.setNombre("Nombre");
         usuario.setEmail("email@example.com");
@@ -68,5 +69,6 @@ public class UsuarioTest {
         assertEquals("email@example.com", usuario.getEmail());
         assertEquals("contrasenia", usuario.getContrasenia());
         assertEquals("Dirección", usuario.getDireccion());
+        assertEquals(1234, usuario1.getId_usuario());
     }
 }
