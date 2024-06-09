@@ -4059,3 +4059,6 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 
 2024-06-09T13:51:01.419+01:00  INFO 8836 --- [fitfemme] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api-rest'
 2024-06-09T13:51:01.425+01:00  INFO 8836 --- [fitfemme] [main] es.fitfemme.FitfemmeApplication          : Started FitfemmeApplication in 2.481 seconds (process running for 2.672)
+2024-06-09T14:36:11.913+01:00  INFO 8836 --- [fitfemme] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-09T14:36:11.915+01:00  INFO 8836 --- [fitfemme] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-09T14:36:11.917+01:00  INFO 8836 --- [fitfemme] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

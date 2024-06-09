@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ProductoMapperTest {
-    private int id_producto = 1234;
+    private int id_producto = 15;
     private String nombre = "nombreTest";
     private String descripcion = "descripcionTest";
     private float precio = 12.14f;

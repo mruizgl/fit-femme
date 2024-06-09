@@ -100,4 +100,36 @@ public class ProductoServiceTest {
         productoService.deleteObject(id);
         verify(productoRepository, times(1)).deleteById(id);
     }
+
+    @Test
+    public void testUpdateObject_ProductoEncontrado() {
+        int idProducto = 123; // ID de ejemplo
+        Producto producto = new Producto();
+        producto.setId_producto(idProducto);
+
+        // Simulamos que el producto existe en el repositorio
+        when(productoRepository.existsById(idProducto)).thenReturn(true);
+
+        // Llamamos al método updateObject
+        productoService.updateObject(producto);
+
+        // Verificamos que se haya llamado al método save del repositorio con el producto correcto
+        verify(productoRepository, times(1)).save(producto);
+    }
+
+    @Test
+    public void testUpdateObject_ProductoNoEncontrado() {
+        int idProducto = 123; // ID de ejemplo
+        Producto producto = new Producto();
+        producto.setId_producto(idProducto);
+
+        // Simulamos que el producto no existe en el repositorio
+        when(productoRepository.existsById(idProducto)).thenReturn(false);
+
+        // Verificamos que al llamar al método updateObject se lance una RuntimeException
+        assertThrows(RuntimeException.class, () -> productoService.updateObject(producto));
+
+        // Verificamos que no se haya llamado al método save del repositorio
+        verify(productoRepository, never()).save(producto);
+    }
 }

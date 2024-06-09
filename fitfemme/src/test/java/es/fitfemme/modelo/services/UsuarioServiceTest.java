@@ -13,8 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 
 public class UsuarioServiceTest {
@@ -79,7 +78,7 @@ public class UsuarioServiceTest {
 
 
     @Test
-    public void testDeleteObject_UsuarioNoExiste() {
+    public void deleteObject_UsuarioNoExisteTest() {
         // Arrange
         int id = 1;
 
@@ -91,5 +90,30 @@ public class UsuarioServiceTest {
         });
     }
 
+    @Test
+    public void deleteObject_UsuarioEncontradoTest() {
+        int id = 123; // ID de ejemplo
+        // Simulamos que el usuario existe en el repositorio
+        when(usuarioRepository.existsById(id)).thenReturn(true);
+
+        // Llamamos al método deleteObject
+        usuarioService.deleteObject(id);
+
+        // Verificamos que se haya llamado al método deleteById del repositorio con el ID correcto
+        verify(usuarioRepository, times(1)).deleteById(id);
+    }
+
+    @Test
+    public void deleteObject_UsuarioNoEncontradoTest() {
+        int id = 123; // ID de ejemplo
+        // Simulamos que el usuario no existe en el repositorio
+        when(usuarioRepository.existsById(id)).thenReturn(false);
+
+        // Verificamos que al llamar al método deleteObject se lance una RuntimeException
+        assertThrows(RuntimeException.class, () -> usuarioService.deleteObject(id));
+
+        // Verificamos que no se haya llamado al método deleteById del repositorio
+        verify(usuarioRepository, never()).deleteById(id);
+    }
 
 }
