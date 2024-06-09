@@ -12,7 +12,7 @@ public class ProductoMapperTest {
     private String nombre = "nombreTest";
     private String descripcion = "descripcionTest";
     private float precio = 12.14f;
-    private int id_categoria=1;
+    private int id_categoria=15;
     private String MESSAGE_ERROR = "No se obtuvo el resultado esperado";
 
     @Test

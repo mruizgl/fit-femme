@@ -2,6 +2,7 @@ package es.fitfemme.negocio.entities;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -14,10 +15,11 @@ public class Categoria {
 
     private String nombre;
 
-    @OneToMany(mappedBy = "id_categoria")
+    @OneToMany(mappedBy = "categoria")
     private Set<Producto> productos;
 
     public Categoria() {
+        productos = new HashSet<>();
     }
 
     public Categoria(int id_categoria) {

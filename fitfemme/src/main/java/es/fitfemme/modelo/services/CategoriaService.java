@@ -44,4 +44,10 @@ public class CategoriaService implements ICrudServiceJpa<Categoria> {
             throw new RuntimeException("Usuario no encontrado por el id  " + id);
         }
     }
+
+    public boolean existsById(int id) {
+        return categoriaRepository.existsById(id);
+    }
+
+
 }
