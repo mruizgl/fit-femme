@@ -22,7 +22,7 @@ public class CategoriaController implements ICrudControllerJpa<Categoria>{
         return categoriaService.getAllObjects();
     }
 
-    @PostMapping("/")
+    @PostMapping("/agregarCategoria")
     @Override
     public ResponseEntity<Categoria> saveObject(@RequestBody Categoria categoria) {
         Categoria savedCategoria = categoriaService.saveObject(categoria);
@@ -44,6 +44,7 @@ public class CategoriaController implements ICrudControllerJpa<Categoria>{
         categoriaService.deleteObject(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
 
 
 

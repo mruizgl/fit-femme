@@ -15,6 +15,10 @@ public class Producto {
     private String descripcion;
     private float precio;
 
+    @ManyToOne
+    @JoinColumn(name = "id_categoria")
+    private Categoria categoria;
+
 
     public Producto() {
     }
@@ -23,12 +27,28 @@ public class Producto {
         this.id_producto = id_producto;
     }
 
+    public Producto(int id_producto, String nombre, String descripcion, float precio, Categoria categoria) {
+        this.id_producto = id_producto;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.categoria = categoria;
+    }
+
     public Producto(int id_producto, String nombre, String descripcion, float precio, int id_categoria) {
         this.id_producto = id_producto;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
         this.id_producto = id_categoria;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
     public int getId_producto() {

@@ -13,7 +13,7 @@ public class Categoria {
 
     private String nombre;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Producto> productos = new ArrayList<>();
 
     public Categoria() {
@@ -70,5 +70,15 @@ public class Categoria {
                 "id_categoria=" + id_categoria +
                 ", nombre='" + nombre + '\'' +
                 '}';
+    }
+
+    public void addProducto(Producto producto) {
+        productos.add(producto);
+        producto.setCategoria(this);
+    }
+
+    public void removeProducto(Producto producto) {
+        productos.remove(producto);
+        producto.setCategoria(null);
     }
 }
