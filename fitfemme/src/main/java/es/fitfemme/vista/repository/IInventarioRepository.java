@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IInventarioRepository extends JpaRepository <Inventario, Integer> {
+    boolean existsById(int id);
 }

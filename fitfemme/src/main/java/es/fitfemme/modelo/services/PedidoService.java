@@ -36,4 +36,9 @@ public class PedidoService implements ICrudServiceJpa<Pedido> {
             throw new RuntimeException("Pedido no se puede borrar. No encontrado por el id " + id);
         }
     }
+
+    @Override
+    public boolean existsById(int id) {
+        return pedidoRepository.existsById(id);
+    }
 }

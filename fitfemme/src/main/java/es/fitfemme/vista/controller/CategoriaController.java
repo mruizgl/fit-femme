@@ -45,7 +45,10 @@ public class CategoriaController implements ICrudControllerJpa<Categoria>{
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-
+    @Override
+    public boolean existsById(int id) {
+        return categoriaService.existsById(id);
+    }
 
 
 }

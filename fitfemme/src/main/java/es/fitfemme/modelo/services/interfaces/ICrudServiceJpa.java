@@ -7,4 +7,5 @@ public interface ICrudServiceJpa<T> {
     T saveObject(T object);
     T updateObject(T object);
     void deleteObject(int id);
+    boolean existsById(int id);
 }

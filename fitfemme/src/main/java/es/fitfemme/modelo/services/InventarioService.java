@@ -44,4 +44,9 @@ public class InventarioService implements ICrudServiceJpa<Inventario> {
             throw new RuntimeException("Usuario no encontrado por el id  " + id);
         }
     }
+
+    @Override
+    public boolean existsById(int id) {
+        return inventarioRepository.existsById(id);
+    }
 }

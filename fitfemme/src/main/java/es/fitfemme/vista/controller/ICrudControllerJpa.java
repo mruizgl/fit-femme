@@ -9,4 +9,5 @@ public interface ICrudControllerJpa <T>{
     ResponseEntity<T> saveObject(T object);
     ResponseEntity<T> updateObject(int id, T object);
     ResponseEntity<Void> deleteObject(int id);
+    boolean existsById(int id);
 }

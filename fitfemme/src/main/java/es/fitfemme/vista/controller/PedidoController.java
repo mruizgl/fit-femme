@@ -45,4 +45,9 @@ public class PedidoController implements ICrudControllerJpa<Pedido>{
         pedidoService.deleteObject(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @Override
+    public boolean existsById(int id) {
+        return pedidoService.existsById(id);
+    }
 }

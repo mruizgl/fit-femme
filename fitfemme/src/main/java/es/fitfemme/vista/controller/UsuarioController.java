@@ -45,4 +45,9 @@ public class UsuarioController implements ICrudControllerJpa<Usuario>{
         usuarioService.deleteObject(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @Override
+    public boolean existsById(int id) {
+        return usuarioService.existsById(id);
+    }
 }

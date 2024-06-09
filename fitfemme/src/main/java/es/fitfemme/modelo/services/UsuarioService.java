@@ -49,5 +49,10 @@ public class UsuarioService implements ICrudServiceJpa<Usuario> {
 
     }
 
+    @Override
+    public boolean existsById(int id) {
+        return usuarioRepository.existsById(id);
+    }
+
 
 }

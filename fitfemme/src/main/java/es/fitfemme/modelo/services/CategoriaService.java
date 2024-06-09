@@ -38,5 +38,10 @@ public class CategoriaService implements ICrudServiceJpa<Categoria> {
         categoriaRepository.deleteById(id);
     }
 
+    @Override
+    public boolean existsById(int id) {
+        return categoriaRepository.existsById(id);
+    }
+
 
 }

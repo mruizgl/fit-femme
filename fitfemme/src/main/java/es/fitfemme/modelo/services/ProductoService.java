@@ -35,10 +35,10 @@ public class ProductoService implements ICrudServiceJpa<Producto> {
 
         // Establecer la relación entre Producto y Categoria
         producto.setCategoria(categoria);
-        categoria.addProducto(producto);
+        // No es necesario añadir explícitamente el producto a la categoría aquí
+        // categoría.addProducto(producto);
 
-        // Guardar la categoría y el producto
-        categoriaRepository.save(categoria); // Se asegura de que la relación se guarde correctamente
+        // Guardar el producto
         return productoRepository.save(producto);
     }
 
@@ -54,6 +54,10 @@ public class ProductoService implements ICrudServiceJpa<Producto> {
     public void deleteObject(int id) {
         productoRepository.deleteById(id);
 
+    }
+
+    public boolean existsById(int id) {
+        return productoRepository.existsById(id);
     }
 
 

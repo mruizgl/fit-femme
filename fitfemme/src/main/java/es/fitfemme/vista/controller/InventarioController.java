@@ -49,4 +49,9 @@ public class InventarioController implements ICrudControllerJpa<Inventario> {
         inventarioService.deleteObject(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @Override
+    public boolean existsById(int id) {
+        return inventarioService.existsById(id);
+    }
 }

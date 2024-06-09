@@ -46,6 +46,11 @@ public class ProductoController implements ICrudControllerJpa<Producto> {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @Override
+    public boolean existsById(int id) {
+        return productoService.existsById(id);
+    }
+
     @PostMapping("/agregarProducto")
     public ResponseEntity<Producto> addProducto(@RequestBody Producto producto, @RequestParam int categoriaId) {
         Producto nuevoProducto = productoService.saveProducto(producto, categoriaId);
