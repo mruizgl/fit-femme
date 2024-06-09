@@ -6,7 +6,9 @@ import es.fitfemme.negocio.entities.Producto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,7 +25,7 @@ public class CategoriaMapperTest {
         Categoria categoria = new Categoria();
         categoria.setId_categoria(id_categoria);
         categoria.setNombre(nombre);
-        Set<Producto> productos = new HashSet<>() ;
+        List<Producto> productos = new ArrayList<>() ;
         productos.add(new Producto(1));
         categoria.setProductos(productos);
 

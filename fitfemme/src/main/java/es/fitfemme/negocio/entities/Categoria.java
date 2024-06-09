@@ -2,9 +2,7 @@ package es.fitfemme.negocio.entities;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "Categorias")
@@ -15,11 +13,10 @@ public class Categoria {
 
     private String nombre;
 
-    @OneToMany(mappedBy = "categoria")
-    private Set<Producto> productos;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Producto> productos = new ArrayList<>();
 
     public Categoria() {
-        productos = new HashSet<>();
     }
 
     public Categoria(int id_categoria) {
@@ -46,11 +43,11 @@ public class Categoria {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public Set<Producto> getProductos() {
+    public List<Producto> getProductos() {
         return productos;
     }
 
-    public void setProductos(Set<Producto> productos) {
+    public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
 

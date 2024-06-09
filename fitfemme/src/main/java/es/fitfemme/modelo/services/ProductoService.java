@@ -10,12 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class ProductoService implements ICrudServiceJpa<Producto> {
-    private IProductoRepository productoRepository;
-
     @Autowired
-    public void setProductoRepository(IProductoRepository productoRepository) {
-        this.productoRepository = productoRepository;
-    }
+    private IProductoRepository productoRepository;
 
     @Override
     public List<Producto> getAllObjects() {
@@ -36,9 +32,6 @@ public class ProductoService implements ICrudServiceJpa<Producto> {
     public void deleteObject(int id) {
         productoRepository.deleteById(id);
 
-    }
-    public List<Producto> saveObjects(List<Producto> productos) {
-        return productoRepository.saveAll(productos);
     }
 
 

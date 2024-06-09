@@ -15,18 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/productos")
 public class ProductoController implements ICrudControllerJpa<Producto> {
-    private ProductoService productoService;
-
-    private CategoriaService categoriaService;
-
-    public ProductoController(CategoriaService categoriaService) {
-        this.categoriaService = categoriaService;
-    }
-
     @Autowired
-    public void setProductoService(ProductoService productoService) {
-        this.productoService = productoService;
-    }
+    private ProductoService productoService;
 
     @GetMapping("/")
     @Override
@@ -56,16 +46,4 @@ public class ProductoController implements ICrudControllerJpa<Producto> {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PostMapping("/agregarLote")
-    public ResponseEntity<String> agregarProductosDesdeJson(@RequestBody List<Producto> productos) {
-        try {
-            for (Producto producto : productos) {
-
-                productoService.saveObjects(productos);
-            }
-            return ResponseEntity.ok("Productos agregados exitosamente.");
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al agregar productos: " + e.getMessage());
-        }
-    }
 }
