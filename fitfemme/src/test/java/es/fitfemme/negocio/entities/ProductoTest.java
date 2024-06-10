@@ -17,7 +17,7 @@ public class ProductoTest {
         assertEquals("NombreProducto", producto.getNombre());
         assertEquals("DescripciónProducto", producto.getDescripcion());
         assertEquals(10.5f, producto.getPrecio());
-        assertEquals(1, producto.getId_categoria());
+        assertEquals(2, producto.getId_categoria());
     }
 
     @Test
