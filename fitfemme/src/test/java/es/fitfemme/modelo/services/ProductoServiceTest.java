@@ -38,10 +38,12 @@ public class ProductoServiceTest {
         Producto producto1 = new Producto();
         producto1.setId_producto(1);
         producto1.setNombre("Producto 1");
+        producto1.setId_categoria(20);
 
         Producto producto2 = new Producto();
         producto2.setId_producto(2);
         producto2.setNombre("Producto 2");
+        producto2.setId_categoria(6);
 
         List<Producto> productos = Arrays.asList(producto1, producto2);
         when(productoRepository.findAll()).thenReturn(productos);
@@ -50,6 +52,7 @@ public class ProductoServiceTest {
         assertEquals(2, result.size());
         assertEquals("Producto 1", result.get(0).getNombre());
         assertEquals("Producto 2", result.get(1).getNombre());
+        assertEquals(20, result.get(1).getId_categoria());
     }
 
     @Test
