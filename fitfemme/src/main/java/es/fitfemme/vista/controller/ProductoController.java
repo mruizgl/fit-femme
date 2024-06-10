@@ -3,6 +3,8 @@ package es.fitfemme.vista.controller;
 import es.fitfemme.modelo.services.CategoriaService;
 import es.fitfemme.modelo.services.InventarioService;
 import es.fitfemme.modelo.services.ProductoService;
+import es.fitfemme.modelo.services.dto.ProductoDTO;
+import es.fitfemme.negocio.entities.Categoria;
 import es.fitfemme.negocio.entities.Producto;
 import es.fitfemme.negocio.entities.Usuario;
 import es.fitfemme.vista.repository.IInventarioRepository;
@@ -12,11 +14,23 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/v1/productos")
 public class ProductoController implements ICrudControllerJpa<Producto> {
-    @Autowired
     private ProductoService productoService;
+    private CategoriaService categoriaService;
+
+    @Autowired
+    public void setProductoService (ProductoService productoService) {
+        this.productoService = productoService;
+    }
+
+    @Autowired
+    public void setCategoriaService(CategoriaService categoriaService)  {
+        this.categoriaService = categoriaService;
+    }
 
     @GetMapping("/")
     @Override
@@ -24,11 +38,26 @@ public class ProductoController implements ICrudControllerJpa<Producto> {
         return productoService.getAllObjects();
     }
 
-    @PostMapping("/")
     @Override
-    public ResponseEntity saveObject(@RequestBody Producto producto) {
-        Producto savedProducto = productoService.saveObject(producto);
-        return new ResponseEntity<>(savedProducto, HttpStatus.CREATED);
+    public ResponseEntity<Producto> saveObject(Producto object) {
+        return null;
+    }
+
+    @PostMapping("/")
+    public ResponseEntity saveObject(@RequestBody ProductoDTO productoDTO) {
+        Categoria categoria = categoriaService.findById(productoDTO.getIdCategoria()).orElse(null);
+        if (categoria == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("La categoría no existe");
+        }
+
+        Producto producto = new Producto();
+        producto.setNombre(productoDTO.getNombre());
+        producto.setDescripcion(productoDTO.getDescripcion());
+        producto.setPrecio(productoDTO.getPrecio());
+        producto.setCategoria(categoria);
+
+        productoService.saveObject(producto);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Producto agregado exitosamente");
     }
 
     @PutMapping("/{id}")
@@ -51,10 +80,7 @@ public class ProductoController implements ICrudControllerJpa<Producto> {
         return productoService.existsById(id);
     }
 
-    @PostMapping("/agregarProducto")
-    public ResponseEntity<Producto> addProducto(@RequestBody Producto producto, @RequestParam int categoriaId) {
-        Producto nuevoProducto = productoService.saveProducto(producto, categoriaId);
-        return new ResponseEntity<>(nuevoProducto, HttpStatus.CREATED);
-    }
+
+
 
 }

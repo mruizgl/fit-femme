@@ -10,8 +10,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class PedidoService implements ICrudServiceJpa<Pedido> {
-    @Autowired
     private IPedidoRepository pedidoRepository;
+
+    @Autowired
+    public void setPedidoRepository (IPedidoRepository pedidoRepository) {
+        this.pedidoRepository = pedidoRepository;
+    }
 
     @Override
     public List<Pedido> getAllObjects() {

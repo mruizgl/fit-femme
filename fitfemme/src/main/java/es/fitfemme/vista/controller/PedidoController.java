@@ -14,9 +14,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/pedidos")
 public class PedidoController implements ICrudControllerJpa<Pedido>{
+    private PedidoService pedidoService;
 
     @Autowired
-    private PedidoService pedidoService;
+    public void setPedidoService(PedidoService pedidoService) {
+        this.pedidoService = pedidoService;
+    }
 
     @GetMapping("/")
     @Override
@@ -31,7 +34,7 @@ public class PedidoController implements ICrudControllerJpa<Pedido>{
         return new ResponseEntity<>(savedPedido, HttpStatus.CREATED);
     }
 
-    @PutMapping("/actualizar/{id}")
+    @PutMapping("/{id}")
     @Override
     public ResponseEntity<Pedido> updateObject(@PathVariable int id, @RequestBody Pedido pedido) {
         pedido.setId_pedido(id);
@@ -39,7 +42,7 @@ public class PedidoController implements ICrudControllerJpa<Pedido>{
         return new ResponseEntity<>(updatedPedido, HttpStatus.OK);
     }
 
-    @DeleteMapping("borrar/{id}")
+    @DeleteMapping("{id}")
     @Override
     public ResponseEntity<Void> deleteObject(@PathVariable int id) {
         pedidoService.deleteObject(id);

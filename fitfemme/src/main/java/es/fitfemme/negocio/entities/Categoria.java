@@ -1,11 +1,15 @@
 package es.fitfemme.negocio.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.*;
 
 @Entity
 @Table(name = "Categorias")
+@JsonIgnoreProperties({"productos"})
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,6 +18,7 @@ public class Categoria {
     private String nombre;
 
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Producto> productos = new ArrayList<>();
 
     public Categoria() {

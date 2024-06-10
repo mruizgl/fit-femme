@@ -97,7 +97,7 @@ public class ProductoControllerTest {
         when(productoService.saveProducto(any(Producto.class), anyInt())).thenReturn(producto);
 
         // Invocar al método del controlador y verificar el resultado
-        ResponseEntity<Producto> response = productoController.addProducto(producto, 1);
+        ResponseEntity<Producto> response = productoController.saveObject(producto);
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals(producto, response.getBody());
     }

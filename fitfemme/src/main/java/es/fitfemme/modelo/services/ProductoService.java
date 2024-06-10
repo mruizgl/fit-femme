@@ -12,11 +12,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class ProductoService implements ICrudServiceJpa<Producto> {
-    @Autowired
     private IProductoRepository productoRepository;
 
+
     @Autowired
-    private ICategoriaRepository categoriaRepository;
+    public void setProductoRepository(IProductoRepository productoRepository) {
+        this.productoRepository = productoRepository;
+    }
 
     @Override
     public List<Producto> getAllObjects() {
@@ -30,15 +32,7 @@ public class ProductoService implements ICrudServiceJpa<Producto> {
 
 
     public Producto saveProducto(Producto producto, int categoriaId) {
-        Categoria categoria = categoriaRepository.findById(categoriaId)
-                .orElseThrow(() -> new RuntimeException("Categoria not found"));
 
-        // Establecer la relación entre Producto y Categoria
-        producto.setCategoria(categoria);
-        // No es necesario añadir explícitamente el producto a la categoría aquí
-        // categoría.addProducto(producto);
-
-        // Guardar el producto
         return productoRepository.save(producto);
     }
 

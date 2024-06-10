@@ -12,11 +12,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class CategoriaService implements ICrudServiceJpa<Categoria> {
-    @Autowired
     private ICategoriaRepository categoriaRepository;
 
+    @Autowired
+    public void setCategoriaRepository (ICategoriaRepository categoriaRepository) {
+        this.categoriaRepository = categoriaRepository;
+    }
 
     @Override
     public List<Categoria> getAllObjects() {
@@ -43,5 +48,8 @@ public class CategoriaService implements ICrudServiceJpa<Categoria> {
         return categoriaRepository.existsById(id);
     }
 
+    public Optional<Categoria> findById(int id) {
+        return categoriaRepository.findById(id);
+    }
 
 }

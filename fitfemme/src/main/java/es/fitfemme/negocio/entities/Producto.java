@@ -1,5 +1,7 @@
 package es.fitfemme.negocio.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Objects;
@@ -17,6 +19,7 @@ public class Producto {
 
     @ManyToOne
     @JoinColumn(name = "id_categoria")
+    @JsonIgnore
     private Categoria categoria;
 
 
