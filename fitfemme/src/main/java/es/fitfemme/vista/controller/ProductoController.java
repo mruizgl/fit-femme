@@ -38,27 +38,13 @@ public class ProductoController implements ICrudControllerJpa<Producto> {
         return productoService.getAllObjects();
     }
 
+    @PostMapping("/")
     @Override
     public ResponseEntity<Producto> saveObject(Producto object) {
-        return null;
+        productoService.saveObject(object);
+        return ResponseEntity.status(HttpStatus.CREATED).body(object);
     }
 
-    @PostMapping("/")
-    public ResponseEntity saveObject(@RequestBody ProductoDTO productoDTO) {
-        Categoria categoria = categoriaService.findById(productoDTO.getIdCategoria()).orElse(null);
-        if (categoria == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("La categoría no existe");
-        }
-
-        Producto producto = new Producto();
-        producto.setNombre(productoDTO.getNombre());
-        producto.setDescripcion(productoDTO.getDescripcion());
-        producto.setPrecio(productoDTO.getPrecio());
-        producto.setCategoria(categoria);
-
-        productoService.saveObject(producto);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Producto agregado exitosamente");
-    }
 
     @PutMapping("/{id}")
     @Override

@@ -50,6 +50,8 @@ public class ProductoControllerTest {
         assertEquals(productos.size(), result.size());
     }
 
+
+
     @Test
     public void saveObjectTest() {
         // Mock de un producto de prueba
@@ -88,17 +90,20 @@ public class ProductoControllerTest {
         assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
     }
 
+
+
     @Test
     public void addProductoTest() {
         // Mock de un producto de prueba
         Producto producto = new Producto(1, "Producto de prueba", "Descripción de prueba", 10.0f, new Categoria(1, "Categoria de prueba"));
 
         // Configurar el comportamiento esperado del servicio de productos
-        when(productoService.saveProducto(any(Producto.class), anyInt())).thenReturn(producto);
+        when(productoService.saveObject(any(Producto.class))).thenReturn(producto);
 
         // Invocar al método del controlador y verificar el resultado
         ResponseEntity<Producto> response = productoController.saveObject(producto);
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals(producto, response.getBody());
     }
+
 }

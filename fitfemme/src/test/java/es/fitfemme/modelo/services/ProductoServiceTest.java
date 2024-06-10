@@ -63,6 +63,8 @@ public class ProductoServiceTest {
         assertEquals("Nuevo Producto", result.getNombre());
     }
 
+
+
     @Test
     public void SaveProductoTest() {
         Producto producto = new Producto();
@@ -79,6 +81,7 @@ public class ProductoServiceTest {
         assertEquals("Nuevo Producto", result.getNombre());
         assertEquals(categoria, result.getCategoria());
     }
+
 
     @Test
     public void updateObjectTest() {
