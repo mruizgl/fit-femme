@@ -10,7 +10,9 @@ document.getElementById('getProducto').addEventListener('click', function() {
             } else {
                 resultado.innerHTML = '<p>ID: ' + data.id + '</p>' +
                                       '<p>Nombre: ' + data.nombre + '</p>' +
-                                      '<p>Precio: ' + data.precio + '</p>';
+                                      '<p>Precio: ' + data.precio + '</p>' +
+                                      '<p>Descripcion: ' + data.descripcion + '</p>'
+                                      '<p>Categoria: ' + data.categoria.nombre + '</p>';
             }
         })
         .catch(error => {
