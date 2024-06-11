@@ -1,3 +1,102 @@
+/* Estilo para el contenedor */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el título */
+.container h1 {
+    color: #c2185b; /* Rosa oscuro */
+    text-align: center;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón */
+button {
+    padding: 10px 20px;
+    background-color: #ffd7e5; /* Rosa pastel */
+    color: #c2185b; /* Rosa oscuro */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #fce4ec; /* Rosa claro */
+}
+
+/* Estilo para el contenedor del mensaje de éxito */
+#successMessage {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dcedc8; /* Verde claro */
+    border-radius: 4px;
+    display: none; /* Ocultar inicialmente */
+}
+
+.container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* Fondo blanco */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el título */
+        .container h1 {
+            color: #c2185b; /* Rosa oscuro */
+            text-align: center;
+        }
+
+        /* Estilo para el campo de entrada de texto */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Estilo para el botón */
+        button {
+            padding: 10px 20px;
+            background-color: #ffd7e5; /* Rosa pastel */
+            color: #c2185b; /* Rosa oscuro */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #fce4ec; /* Rosa claro */
+        }
+
+        /* Estilo para el contenedor del resultado */
+        #resultado {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9; /* Fondo pastel */
+            border-radius: 4px;
+        }
+
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9; /* Fondo pastel */
@@ -5,30 +104,13 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #fff; /* Blanco */
-    padding: 40px 0 20px; /* Añadido relleno superior y reducido el inferior */
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1; /* Z-index más bajo que el del formulario */
-}
-
-header img {
-    max-width: 200px; /* Ajusta el tamaño según sea necesario */
-}
-
 .container {
     max-width: 600px;
-    margin: 240px auto 20px; /* Ajustado margen superior */
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff; /* Blanco */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* Añadido posicionamiento relativo */
-    z-index: 2; /* Z-index mayor que el del encabezado */
 }
 
 h1 {
@@ -84,8 +166,6 @@ input[type="text"] {
     border-radius: 4px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    position: relative; /* Añadido posicionamiento relativo */
-    z-index: 1; /* Z-index mayor que el del encabezado */
 }
 
 #resultado {
@@ -97,4 +177,16 @@ input[type="text"] {
 
 #resultado p {
     margin: 0;
+}
+
+/* Estilos específicos para el encabezado */
+header {
+    background-color: #fff; /* Blanco */
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+    text-align: center;
+    z-index: 100; /* Z-index mayor para que esté por encima del resto de elementos */
+}
+
+header img {
+    max-width: 200px; /* Ajusta el tamaño según sea necesario */
 }
