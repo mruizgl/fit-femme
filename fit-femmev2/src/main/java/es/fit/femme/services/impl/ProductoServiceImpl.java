@@ -1,7 +1,7 @@
 package es.fit.femme.services.impl;
 
 import es.fit.femme.model.entities.Producto;
-import es.fit.femme.persistence.IProductoDao;
+import es.fit.femme.persistence.dao.interfaces.IProductoDao;
 import es.fit.femme.services.interfaces.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

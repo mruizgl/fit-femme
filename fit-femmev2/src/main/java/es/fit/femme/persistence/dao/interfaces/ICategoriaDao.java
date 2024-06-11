@@ -1,4 +1,4 @@
-package es.fit.femme.persistence;
+package es.fit.femme.persistence.dao.interfaces;
 
 import es.fit.femme.model.entities.Categoria;
 

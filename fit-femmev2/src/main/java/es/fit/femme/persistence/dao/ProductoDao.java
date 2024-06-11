@@ -1,7 +1,7 @@
 package es.fit.femme.persistence.dao;
 
 import es.fit.femme.model.entities.Producto;
-import es.fit.femme.persistence.IProductoDao;
+import es.fit.femme.persistence.dao.interfaces.IProductoDao;
 import es.fit.femme.persistence.repositories.IProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

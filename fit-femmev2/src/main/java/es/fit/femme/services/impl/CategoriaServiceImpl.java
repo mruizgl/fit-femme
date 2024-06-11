@@ -1,7 +1,7 @@
 package es.fit.femme.services.impl;
 
 import es.fit.femme.model.entities.Categoria;
-import es.fit.femme.persistence.ICategoriaDao;
+import es.fit.femme.persistence.dao.interfaces.ICategoriaDao;
 import es.fit.femme.services.interfaces.ICategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
