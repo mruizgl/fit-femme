@@ -1,37 +1,41 @@
-package es.fit.femme.business.entities;
+package es.fit.femme.model.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-@Getter
-@Entity(name="producto")
-@Table(name = "producto")
-public class Producto {
+@Entity(name = "categoria")
+@Table(name = "categoria")
+public class Categoria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nombre;
     private String descripcion;
-    private Double precio;
 
-    @ManyToOne
-    @JoinColumn(name = "id_categoria")
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     @JsonIgnore
-    private Categoria categoria;
+    private List<Producto> productos;
 
-    public Producto() {
+    public Categoria() {
+        this.productos = new ArrayList<>();
     }
 
-    public Producto(Long id, String nombre, String descripcion, Double precio, Categoria categoria) {
+    public Categoria(Long id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public Categoria(Long id, String nombre, String descripcion) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.precio = precio;
-        this.categoria = categoria;
+        this.productos = new ArrayList<>();
     }
 
     public Long getId() {
@@ -58,28 +62,20 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public Double getPrecio() {
-        return precio;
+    public List<Producto> getProductos() {
+        return productos;
     }
 
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Producto producto = (Producto) o;
-        return Objects.equals(id, producto.id);
+        Categoria categoria = (Categoria) o;
+        return Objects.equals(id, categoria.id);
     }
 
     @Override

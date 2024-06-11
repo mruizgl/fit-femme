@@ -1,6 +1,6 @@
-package es.fit.femme.business.persistence;
+package es.fit.femme.persistence;
 
-import es.fit.femme.business.entities.Categoria;
+import es.fit.femme.model.entities.Categoria;
 
 import java.util.List;
 import java.util.Optional;

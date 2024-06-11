@@ -1,8 +1,6 @@
 package es.fit.femme.model.dto;
 
-import es.fit.femme.business.entities.Categoria;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import es.fit.femme.model.entities.Categoria;
 
 import java.util.Objects;
 

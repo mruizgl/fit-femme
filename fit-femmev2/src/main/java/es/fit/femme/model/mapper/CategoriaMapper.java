@@ -1,6 +1,6 @@
 package es.fit.femme.model.mapper;
 
-import es.fit.femme.business.entities.Categoria;
+import es.fit.femme.model.entities.Categoria;
 import es.fit.femme.model.dto.CategoriaDTO;
 
 public class CategoriaMapper {

@@ -1,8 +1,8 @@
-package es.fit.femme.model.services.impl;
+package es.fit.femme.services.impl;
 
-import es.fit.femme.business.entities.Producto;
-import es.fit.femme.business.persistence.IProductoDao;
-import es.fit.femme.model.services.interfaces.IProductoService;
+import es.fit.femme.model.entities.Producto;
+import es.fit.femme.persistence.IProductoDao;
+import es.fit.femme.services.interfaces.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

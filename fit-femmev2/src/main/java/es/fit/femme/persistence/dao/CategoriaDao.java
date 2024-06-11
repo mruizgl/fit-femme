@@ -1,11 +1,10 @@
-package es.fit.femme.business.persistence.dao;
+package es.fit.femme.persistence.dao;
 
-import es.fit.femme.business.entities.Categoria;
-import es.fit.femme.business.persistence.ICategoriaDao;
-import es.fit.femme.business.repositories.ICategoriaRepository;
+import es.fit.femme.model.entities.Categoria;
+import es.fit.femme.persistence.ICategoriaDao;
+import es.fit.femme.persistence.repositories.ICategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;

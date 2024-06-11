@@ -1,10 +1,9 @@
-package es.fit.femme.model.controller;
+package es.fit.femme.controller;
 
-import es.fit.femme.business.entities.Producto;
+import es.fit.femme.model.entities.Producto;
 import es.fit.femme.model.dto.ProductoDTO;
-import es.fit.femme.model.mapper.CategoriaMapper;
 import es.fit.femme.model.mapper.ProductoMapper;
-import es.fit.femme.model.services.interfaces.IProductoService;
+import es.fit.femme.services.interfaces.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

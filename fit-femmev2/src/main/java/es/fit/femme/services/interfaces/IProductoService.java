@@ -1,11 +1,11 @@
-package es.fit.femme.business.persistence;
+package es.fit.femme.services.interfaces;
 
-import es.fit.femme.business.entities.Producto;
+import es.fit.femme.model.entities.Producto;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface IProductoDao {
+public interface IProductoService {
     List<Producto> getAllObjects();
     Optional<Producto> findById(Long id);
     void saveObject(Producto producto);

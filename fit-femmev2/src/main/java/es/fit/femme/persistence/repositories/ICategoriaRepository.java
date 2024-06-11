@@ -1,6 +1,6 @@
-package es.fit.femme.business.repositories;
+package es.fit.femme.persistence.repositories;
 
-import es.fit.femme.business.entities.Categoria;
+import es.fit.femme.model.entities.Categoria;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package es.fit.femme.model.mapper;
 
-import es.fit.femme.business.entities.Producto;
+import es.fit.femme.model.entities.Producto;
 import es.fit.femme.model.dto.ProductoDTO;
 
 public class ProductoMapper {

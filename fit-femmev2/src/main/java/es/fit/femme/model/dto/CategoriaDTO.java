@@ -1,9 +1,6 @@
 package es.fit.femme.model.dto;
 
-import es.fit.femme.business.entities.Producto;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
+import es.fit.femme.model.entities.Producto;
 
 import java.util.List;
 import java.util.Objects;
