@@ -38,12 +38,11 @@ public class Producto {
         this.categoria = categoria;
     }
 
-    public Producto(int id_producto, String nombre, String descripcion, float precio, int id_categoria) {
+    public Producto(int id_producto, String nombre, String descripcion, float precio) {
         this.id_producto = id_producto;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
-        this.id_producto = id_categoria;
     }
 
     public Categoria getCategoria() {
