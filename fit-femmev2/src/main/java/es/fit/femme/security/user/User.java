@@ -21,15 +21,21 @@ import java.util.List;
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-    @Column(nullable = false)
-    String username;
-    String firstname;
-    String lastname;
-    String country;
-    String password;
+    @Column(name = "user_id")
+    private Integer id;
+    @Column(name = "username", nullable = false)
+    private String username;
+    @Column(name = "firstname")
+    private String firstname;
+    @Column(name = "lastname")
+    private String lastname;
+    @Column(name = "country")
+    private String country;
+    @Column(name = "password")
+    private String password;
     @Enumerated(EnumType.STRING)
-    Role role;
+    @Column(name = "role")
+    private Role role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
