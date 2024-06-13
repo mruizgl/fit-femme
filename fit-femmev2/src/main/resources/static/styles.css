@@ -3,14 +3,14 @@
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff; /* Fondo blanco */
+    background-color: #ffffff; /* Fondo blanco */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo para el título */
 .container h1 {
-    color: #c2185b; /* Rosa oscuro */
+    color: #333333; /* Gris oscuro */
     text-align: center;
 }
 
@@ -20,15 +20,15 @@ input[type="text"], input[type="number"] {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc; /* Gris claro */
     box-sizing: border-box;
 }
 
 /* Estilo para el botón */
 button {
     padding: 10px 20px;
-    background-color: #ffd7e5; /* Rosa pastel */
-    color: #c2185b; /* Rosa oscuro */
+    background-color: #007BFF; /* Azul estándar */
+    color: #ffffff; /* Blanco */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -36,86 +36,24 @@ button {
 }
 
 button:hover {
-    background-color: #fce4ec; /* Rosa claro */
+    background-color: #0056b3; /* Azul oscuro */
 }
 
 /* Estilo para el contenedor del mensaje de éxito */
 #successMessage {
     margin-top: 20px;
     padding: 10px;
-    background-color: #dcedc8; /* Verde claro */
+    background-color: #d4edda; /* Verde claro */
     border-radius: 4px;
     display: none; /* Ocultar inicialmente */
 }
 
-.container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff; /* Fondo blanco */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Estilo para el título */
-        .container h1 {
-            color: #c2185b; /* Rosa oscuro */
-            text-align: center;
-        }
-
-        /* Estilo para el campo de entrada de texto */
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        /* Estilo para el botón */
-        button {
-            padding: 10px 20px;
-            background-color: #ffd7e5; /* Rosa pastel */
-            color: #c2185b; /* Rosa oscuro */
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #fce4ec; /* Rosa claro */
-        }
-
-        /* Estilo para el contenedor del resultado */
-        #resultado {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f9f9f9; /* Fondo pastel */
-            border-radius: 4px;
-        }
-
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* Fondo pastel */
+    background-color: #f8f9fa; /* Gris muy claro */
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff; /* Blanco */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    color: #c2185b; /* Rosa oscuro */
-    text-align: center;
 }
 
 ul {
@@ -131,8 +69,8 @@ li {
 a {
     display: block;
     padding: 10px 20px;
-    background-color: #ffd7e5; /* Rosa pastel */
-    color: #c2185b; /* Rosa oscuro */
+    background-color: #007BFF; /* Azul estándar */
+    color: #ffffff; /* Blanco */
     text-decoration: none;
     border-radius: 4px;
     text-align: center;
@@ -140,38 +78,13 @@ a {
 }
 
 a:hover {
-    background-color: #fce4ec; /* Rosa claro */
-}
-
-button {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    background-color: #ffd7e5; /* Rosa pastel */
-    color: #c2185b; /* Rosa oscuro */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #fce4ec; /* Rosa claro */
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    background-color: #0056b3; /* Azul oscuro */
 }
 
 #resultado {
     margin-top: 20px;
     padding: 10px;
-    background-color: #fff; /* Blanco */
+    background-color: #ffffff; /* Blanco */
     border-radius: 4px;
 }
 
@@ -181,7 +94,7 @@ input[type="text"] {
 
 /* Estilos específicos para el encabezado */
 header {
-    background-color: #fff; /* Blanco */
+    background-color: #ffffff; /* Blanco */
     padding: 20px; /* Ajusta el relleno según sea necesario */
     text-align: center;
     z-index: 100; /* Z-index mayor para que esté por encima del resto de elementos */

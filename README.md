@@ -1,7 +1,7 @@
 # Proyecto Fit-Femme
 
 <center>
-<img src = img/logo-title.png>
+<img src = img/logo.png>
 </center>
 
 ## Índice  

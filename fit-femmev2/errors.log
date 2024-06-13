@@ -833,3 +833,31 @@ io.jsonwebtoken.io.DecodingException: Illegal base64url character: '"'
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 
+2024-06-13T13:32:09.992+01:00  INFO 23904 --- [fit-femme] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 49 class path changes (0 additions, 0 deletions, 49 modifications)
+2024-06-13T13:32:10.011+01:00  INFO 23904 --- [fit-femme] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13T13:32:10.014+01:00  INFO 23904 --- [fit-femme] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-13T13:32:10.017+01:00  INFO 23904 --- [fit-femme] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-13T13:32:10.110+01:00  INFO 23904 --- [fit-femme] [restartedMain] es.fit.femme.FitFemmeApplication         : Starting FitFemmeApplication using Java 17.0.11 with PID 23904 (C:\Users\melru\Documents\GitHub\fit-femme\fit-femmev2\target\classes started by melru in C:\Users\melru\Documents\GitHub\fit-femme\fit-femmev2)
+2024-06-13T13:32:10.111+01:00  INFO 23904 --- [fit-femme] [restartedMain] es.fit.femme.FitFemmeApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-06-13T13:32:10.247+01:00  INFO 23904 --- [fit-femme] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13T13:32:10.265+01:00  INFO 23904 --- [fit-femme] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2024-06-13T13:32:10.377+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-13T13:32:10.378+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-13T13:32:10.378+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13T13:32:10.393+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.a.c.c.C.[.[localhost].[/api-rest]      : Initializing Spring embedded WebApplicationContext
+2024-06-13T13:32:10.393+01:00  INFO 23904 --- [fit-femme] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 279 ms
+2024-06-13T13:32:10.426+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13T13:32:10.430+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-13T13:32:10.439+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13T13:32:10.441+01:00  INFO 23904 --- [fit-femme] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-06-13T13:32:10.442+01:00  INFO 23904 --- [fit-femme] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@3f04b0c6
+2024-06-13T13:32:10.442+01:00  INFO 23904 --- [fit-femme] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-06-13T13:32:10.526+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13T13:32:10.529+01:00  INFO 23904 --- [fit-femme] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13T13:32:10.628+01:00  WARN 23904 --- [fit-femme] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13T13:32:10.644+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-13T13:32:10.729+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3954cc8c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d7dd455, org.springframework.security.web.context.SecurityContextHolderFilter@269c3b06, org.springframework.security.web.header.HeaderWriterFilter@6ca5f4f6, org.springframework.security.web.authentication.logout.LogoutFilter@77e3d44, es.fit.femme.security.jwt.JwtAuthenticationFilter@6631e975, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c260b2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f67401a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67611415, org.springframework.security.web.session.SessionManagementFilter@8c769b9, org.springframework.security.web.access.ExceptionTranslationFilter@63953cad, org.springframework.security.web.access.intercept.AuthorizationFilter@4fb65c23]
+2024-06-13T13:32:10.775+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-13T13:32:10.782+01:00  INFO 23904 --- [fit-femme] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api-rest'
+2024-06-13T13:32:10.787+01:00  INFO 23904 --- [fit-femme] [restartedMain] es.fit.femme.FitFemmeApplication         : Started FitFemmeApplication in 0.711 seconds (process running for 1380.489)
+2024-06-13T13:32:10.790+01:00  INFO 23904 --- [fit-femme] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
